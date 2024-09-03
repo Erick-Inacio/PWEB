@@ -15,143 +15,140 @@
 <body>
     <main>
         <header>
-            <!-- O elemento nav é usado para definir um bloco 
-             de links de navegação dentro de um documento.-->
-            <nav>
-                <!-- A tag <ul> é comumente usada em conjunto com a tag <nav>, como mostrado no
-                exemplo anterior, para criar menus de navegação que listam links de forma 
-                organizada, mas sem uma ordem específica. -->
-                <ul>
-                    <li>
-                        <a href="#API, o que é?">API, o que é?</a>
-                        <a href="#Tipos de API">Tipos de API</a>
-                        <a href="#WEB Services">WEB Services</a>
-                        <a href="#Bibliotecas">Bibliotecas</a>
-                        <a href="#Sistemas Operacionais">Sistemas Operacionais</a>
-                        <a href="#BDs">BDs</a>
-                        <a href="#Hardwares">Hardwares</a>
-                        <a href="#Social">Social</a>
-                        <a href="#Nuvem">Nuvem</a>
-                    </li>
-                </ul>
-            </nav>
-            <section>
-                <h2 id="API, o que é?">API, o que é?</h2>
-                <article>
-                    <p>
-                    <p>Atualmente, dentre as infinitas aplicações existentes, existem inúmeras formas de criá-las,
-                        programa-las e implementa-las. Dentre uma dessas formas, está o uso de <i>APIs</i>
-                        (<i>Application
-                            Programming Interface</i>). Imagine um exemplo de que se está em um restaurante e deseja
-                        fazer um
-                        pedido a chef, você n pode ter acesso direto ao chef para fazer esse tipo de pedido, você deve
-                        pedir ao garçom que anota seu pedido e envia ao chefe que recebe seu pedido, confecciona-o e
-                        entrega ao garçom para que lhe entregue o que você pediu. <i>APIs</i> são, basicamente os
-                        garçons dos
-                        sistemas, ele que faz a conexão entre as diferentes partes de um sistema, inclusive, integra
-                        outros sistemas aos teu.
-                    <p>As Interfaces de Programação de Aplicações (nome em português das <i>APIs</i>), são um conjunto
-                        de
-                        conceitos, padrões, ferramentas e protocolos que permitem uma criação mais simplificada e segura
-                        de aplicações, pois permite integração e a comunicação entre diferentes partes do mesmo ou de
-                        outros softwares (de terceiros).
-                    </p>
-                </article>
-            </section>
-            <section>
-                <h2 id="Tipos de API">Tipos de API</h2>
-                <article>
-                    <p>
-                    <p>Existem vários tipos de <i>APIs</i>, irei tratar os mais comuns que são: WEB services,
-                        bibliotecas,
-                        sistemas operacionais, BDs (banco de Dados), hardwares, nuvem e social.
-                    </p>
-                </article>
-            </section>
-            <section>
-                <h2 id="WEB Services">WEB Services</h2>
-                <article>
-                    <p>Permite que diferentes aplicações interajam pela a utilização da Internet, através de protocolos
-                        HTTPs
-                        independente das tecnologias utilizadas em ambas as partes.
-                        Na prática uma aplicação cliente, faz a requisição de dados ao servidor através da API. A API,
-                        que
-                        estava no aguardo de uma requisição, recebe, uma ou muitas, requisições através dos verbos HTTPs
-                        (Get, Put, Post, Delete), faz o processamento utilizando dados do BD, e devolve, se necessário,
-                        os dados a aplicação cliente. Atualmente essa transferência de dados vem sendo feita amplamente
-                        através
-                        de arquivos JSON.
-                    <figure>
-                        <img src="Imagem1.png" title="Como funciona um WEB Service">
-                        <figcaption>
-                            <small>
-                                Figura 1: Como funciona um WEB Services
-                            </small>
-                        </figcaption>
-                    </figure>
-                </article>
-            </section>
-            <section>
-                <article>
-                    <h2 id="Bibliotecas">Bibliotecas</h2>
-                    <p> São basicamente blocos de códigos, funções, classes e métodos prontos que realizam funções e
-                        podem ser incorporados a um projeto.
-                        Um exemplo desse tipo de API é o Matplotlib em Python, que facilita a criação de gráficos e
-                        visualizações.
-                </article>
-            </section>
-            <section>
-                <article>
-                    <h2 id="Sistemas Operacionais">Sistemas Operacionais</h2>
-                    <p> Essas APIs, permitem que programas e aplicações consigam acessar componentes, serviços e
-                        recursos específicos do SO (Sistema operacional). Um exemplo seria a WinApi (API do Windows)
-                        que facilita a manipulação e o acesso a várias funcionalidades a nível de sistema do Windows,
-                        aos programadores e aplicações
-                </article>
-            </section>
-            <section>
-                <article>
-                    <h2 id="BDs">BDs</h2>
-                    <p>Permitem a interação com os SGBDs (Sistema de Gerenciamento de Banco de Dados) realizando as
-                        operações pertinentes ao banco, como por exemplo, o famoso CRUD (Create, Read, Update and
-                        Delete) no banco de dados.
-                </article>
-            </section>
-            <section>
-                <article>
-                    <h2 id="softwares">softwares</h2>
-                    <p>Permite a integração do software com os hardwares de um componente físico, sem a necessidade
-                        de conhecimento prévio de programação de baixo nível. Um exemplo seria o OpenGL, que
-                        seria é uma API de gráficos de hardware que possibilita a criação eficiente de gráficos
-                        tridimensionais, abstraindo a complexidade dos detalhes específicos da
-                        placa gráfica subjacente.
-                </article>
-            </section>
-            <section>
-                <article>
-                    <h2 id="Sociais">Sociais</h2>
-                    <p> Permitem ao desenvolvedor, integrar funções de redes sociais a sua aplicação. Seu uso
-                        mais comum é para a obtenção de dados e fotos do usuário para facilitar logins e
-                        cadastros, por exemplo.
-
-                </article>
-            </section>
-            <section>
-                <article>
-                    <h2 id="Nuvem">Nuvem</h2>
-                    <p> Serve como interfaces padrões para acessarmos serviços de computação em nuvem, podemos
-                        acessar e gerenciar serviços, como armazenamento de dados, computação, aprendizado de
-                        máquina, análise de dados, entre outros, fornecidos por provedores de nuvem como Amazon
-                        Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP) e outros.
-                        Com isso, podemos ver e perceber que mesmo não sendo programadores, sendo apenas usuários,
-                        utilizamos de APIs o tempo todo na atual “Era digital”, mesmo que sem perceber. Seja utilizando
-                        seu celular ou até mesmo editando um arquivo de texto ou planilha pelo computador, as APIs estão
-                        por todos os lados conectando e acessando as coisas.
-
-
-                </article>
-            </section>
+            <h1><b>API</b></h1>
         </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#API, o que é?">API, o que é?</a>
+                    <a href="#Tipos de API">Tipos de API</a>
+                    <a href="#WEB Services">WEB Services</a>
+                    <a href="#Bibliotecas">Bibliotecas</a>
+                    <a href="#Sistemas Operacionais">Sistemas Operacionais</a>
+                    <a href="#BDs">BDs</a>
+                    <a href="#Hardwares">Hardwares</a>
+                    <a href="#Social">Social</a>
+                    <a href="#Nuvem">Nuvem</a>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <h2 id="API, o que é?">API, o que é?</h2>
+            <article>
+                <p>
+                <p>Atualmente, dentre as infinitas aplicações existentes, existem inúmeras formas de criá-las,
+                    programa-las e implementa-las. Dentre uma dessas formas, está o uso de <i>APIs</i>
+                    (<i>Application
+                        Programming Interface</i>). Imagine um exemplo de que se está em um restaurante e deseja
+                    fazer um
+                    pedido a chef, você n pode ter acesso direto ao chef para fazer esse tipo de pedido, você deve
+                    pedir ao garçom que anota seu pedido e envia ao chefe que recebe seu pedido, confecciona-o e
+                    entrega ao garçom para que lhe entregue o que você pediu. <i>APIs</i> são, basicamente os
+                    garçons dos
+                    sistemas, ele que faz a conexão entre as diferentes partes de um sistema, inclusive, integra
+                    outros sistemas aos teu.
+                <p>As Interfaces de Programação de Aplicações (nome em português das <i>APIs</i>), são um conjunto
+                    de
+                    conceitos, padrões, ferramentas e protocolos que permitem uma criação mais simplificada e segura
+                    de aplicações, pois permite integração e a comunicação entre diferentes partes do mesmo ou de
+                    outros softwares (de terceiros).
+                </p>
+            </article>
+        </section>
+        <section>
+            <h2 id="Tipos de API">Tipos de API</h2>
+            <article>
+                <p>
+                <p>Existem vários tipos de <i>APIs</i>, irei tratar os mais comuns que são: WEB services,
+                    bibliotecas,
+                    sistemas operacionais, BDs (banco de Dados), hardwares, nuvem e social.
+                </p>
+            </article>
+        </section>
+        <section>
+            <h2 id="WEB Services">WEB Services</h2>
+            <article>
+                <p>Permite que diferentes aplicações interajam pela a utilização da Internet, através de protocolos
+                    HTTPs
+                    independente das tecnologias utilizadas em ambas as partes.
+                    Na prática uma aplicação cliente, faz a requisição de dados ao servidor através da API. A API,
+                    que
+                    estava no aguardo de uma requisição, recebe, uma ou muitas, requisições através dos verbos HTTPs
+                    (Get, Put, Post, Delete), faz o processamento utilizando dados do BD, e devolve, se necessário,
+                    os dados a aplicação cliente. Atualmente essa transferência de dados vem sendo feita amplamente
+                    através
+                    de arquivos JSON.
+                <figure>
+                    <img src="Imagem1.png" title="Como funciona um WEB Service">
+                    <figcaption>
+                        <small>
+                            Figura 1: Como funciona um WEB Services
+                        </small>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2 id="Bibliotecas">Bibliotecas</h2>
+                <p> São basicamente blocos de códigos, funções, classes e métodos prontos que realizam funções e
+                    podem ser incorporados a um projeto.
+                    Um exemplo desse tipo de API é o Matplotlib em Python, que facilita a criação de gráficos e
+                    visualizações.
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2 id="Sistemas Operacionais">Sistemas Operacionais</h2>
+                <p> Essas APIs, permitem que programas e aplicações consigam acessar componentes, serviços e
+                    recursos específicos do SO (Sistema operacional). Um exemplo seria a WinApi (API do Windows)
+                    que facilita a manipulação e o acesso a várias funcionalidades a nível de sistema do Windows,
+                    aos programadores e aplicações
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2 id="BDs">BDs</h2>
+                <p>Permitem a interação com os SGBDs (Sistema de Gerenciamento de Banco de Dados) realizando as
+                    operações pertinentes ao banco, como por exemplo, o famoso CRUD (Create, Read, Update and
+                    Delete) no banco de dados.
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2 id="softwares">softwares</h2>
+                <p>Permite a integração do software com os hardwares de um componente físico, sem a necessidade
+                    de conhecimento prévio de programação de baixo nível. Um exemplo seria o OpenGL, que
+                    seria é uma API de gráficos de hardware que possibilita a criação eficiente de gráficos
+                    tridimensionais, abstraindo a complexidade dos detalhes específicos da
+                    placa gráfica subjacente.
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2 id="Sociais">Sociais</h2>
+                <p> Permitem ao desenvolvedor, integrar funções de redes sociais a sua aplicação. Seu uso
+                    mais comum é para a obtenção de dados e fotos do usuário para facilitar logins e
+                    cadastros, por exemplo.
+
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2 id="Nuvem">Nuvem</h2>
+                <p> Serve como interfaces padrões para acessarmos serviços de computação em nuvem, podemos
+                    acessar e gerenciar serviços, como armazenamento de dados, computação, aprendizado de
+                    máquina, análise de dados, entre outros, fornecidos por provedores de nuvem como Amazon
+                    Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP) e outros.
+                    Com isso, podemos ver e perceber que mesmo não sendo programadores, sendo apenas usuários,
+                    utilizamos de APIs o tempo todo na atual “Era digital”, mesmo que sem perceber. Seja utilizando
+                    seu celular ou até mesmo editando um arquivo de texto ou planilha pelo computador, as APIs estão
+                    por todos os lados conectando e acessando as coisas.
+
+
+            </article>
+        </section>
+
     </main>
 </body>
 

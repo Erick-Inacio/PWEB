@@ -16,10 +16,15 @@ body{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    padding: 20px;
 }
 
 header{
-    background-color: rgb(239, 196, 239);
+    background-color: rgb(123, 51, 129);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 img{
@@ -34,6 +39,47 @@ figure figcaption{
     text-align: center;
 }
 
+a {
+    padding: 10px 20px; 
+    text-decoration: none;
+}
+
+b{
+    color: #ffffff;
+}
+
 figure{
     align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #7c05ac;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #c88bf3;
+    border-radius: 5px;
+}
+
+section{
+    padding: 10px 20px;
+    border: #000000 1px solid;
+
 }
