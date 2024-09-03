@@ -1,0 +1,39 @@
+p{
+    text-indent: 5cqi;
+}
+
+title{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    background-color: plum;
+}
+
+body{
+    background-color: #ffffff;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+header{
+    background-color: rgb(239, 196, 239);
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid ;
+    max-width: 100%;
+    height: auto;   
+}
+
+figure figcaption{
+    text-align: center;
+}
+
+figure{
+    align-items: center;
+}
