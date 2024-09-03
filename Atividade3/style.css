@@ -16,7 +16,7 @@ h2 {
 body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.500), rgba(255, 166, 0, 0.500), rgba(255, 255, 0, 0.511), rgba(0, 128, 0, 0.5), rgba(0, 0, 255, 0.511), rgba(76, 0, 130, 0.505), rgba(238, 130, 238, 0.478));
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     /* background-color: #ffffff;
@@ -27,7 +27,7 @@ body {
 }
 
 header {
-    background-color: rgb(123, 51, 129);
+    background-color: rgba(179, 37, 192, 0.505);
     height: 100px;
     display: flex;
     align-items: center;
@@ -66,10 +66,12 @@ nav ul {
     display: flex;
     justify-content: center;
     height: auto;
+    
 }
 
 nav ul li {
     margin: 0 15px;
+    
 }
 
 nav ul li a {
