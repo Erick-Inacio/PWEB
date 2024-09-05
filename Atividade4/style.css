@@ -1,0 +1,23 @@
+header{
+    background-color: #ec91d8;
+    height:100px;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+title{
+    text-align: center;
+}
+
+.container-box{
+    display: flex;
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
+}
+
+nav{
+    list-style-type: none;
+    background-color: #ffbeef;
+}
