@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joquempo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding-top: 50px;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        .choices {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .choice {
+            border: 2px solid #333;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .choice:hover {
+            transform: scale(1.1);
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 1.5em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Joquempo</h1>
+    <div class="choices">
+        <div class="choice" onclick="playGame('pedra')">
+            🪨<br>Pedra
+        </div>
+        <div class="choice" onclick="playGame('papel')">
+            📄<br>Papel
+        </div>
+        <div class="choice" onclick="playGame('tesoura')">
+            ✂️<br>Tesoura
+        </div>
+    </div>
+    <div class="result" id="result"></div>
+
+    <script>
+        function playGame(playerChoice) {
+            const choices = ['pedra', 'papel', 'tesoura'];
+            const pcChoice = choices[Math.floor(Math.random() * 3)];
+            let result = '';
+
+            if (playerChoice === pcChoice) {
+                result = `Empate! Ambos escolheram ${playerChoice}.`;
+            } else if ((playerChoice === 'pedra' && pcChoice === 'tesoura') ||
+                       (playerChoice === 'papel' && pcChoice === 'pedra') ||
+                       (playerChoice === 'tesoura' && pcChoice === 'papel')) {
+                result = `Você ganhou! ${playerChoice} ganha de ${pcChoice}.`;
+            } else {
+                result = `Você perdeu! ${pcChoice} ganha de ${playerChoice}.`;
+            }
+
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>
