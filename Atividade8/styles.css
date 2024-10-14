@@ -1,0 +1,73 @@
+/* Estilo global */
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 85%;
+    background-color: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.poster-area img {
+    width: 320px;
+    border: 3px solid #343a40;
+    border-radius: 6px;
+}
+
+#titulo-filme {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #212529;
+}
+
+button {
+    padding: 14px 25px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#resultado p {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    margin: 12px 0;
+    border-radius: 6px;
+    color: #495057;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Filmes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Avaliação de Filmes</h1>
+        </header>
+        <section class="content">
+            <div class="poster-area">
+                <img src="poster.jpeg" alt="Cartaz do Filme" id="poster">
+                <div id="titulo-filme">Deadpool e Wolverine</div>
+            </div>
+            <div class="resultado-area">
+                <button onclick="iniciarPesquisa()">Iniciar Avaliação</button>
+                <div id="resultado">
+                    <p id="mensagem"></p>
+                    <p id="qtdPessimo"></p>
+                    <p id="prcntPessimo"></p>
+                    <p id="qtdOtimoBom"></p>
+                    <p id="prcntOtimoBom"></p>
+                    <p id="maisVelho"></p>
+                    <p id="maisNovo"></p>
+                    <p id="qtdMasc"></p>
+                    <p id="qtdFem"></p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
