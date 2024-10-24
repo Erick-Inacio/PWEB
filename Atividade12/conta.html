@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta Corrente e Poupança</title>
+</head>
+<body>
+    <h1>Dados de Contas Bancárias</h1>
+
+    <h2>Conta Corrente</h2>
+    <label for="nomeCorrente">Nome do correntista:</label>
+    <input type="text" id="nomeCorrente"><br><br>
+
+    <label for="bancoCorrente">Banco:</label>
+    <input type="text" id="bancoCorrente"><br><br>
+
+    <label for="numeroCorrente">Número da Conta:</label>
+    <input type="number" id="numeroCorrente"><br><br>
+
+    <label for="saldoCorrente">Saldo:</label>
+    <input type="number" id="saldoCorrente"><br><br>
+
+    <h2>Conta Poupança</h2>
+    <label for="nomePoupanca">Nome do correntista:</label>
+    <input type="text" id="nomePoupanca"><br><br>
+
+    <label for="bancoPoupanca">Banco:</label>
+    <input type="text" id="bancoPoupanca"><br><br>
+
+    <label for="numeroPoupanca">Número da Conta:</label>
+    <input type="number" id="numeroPoupanca"><br><br>
+
+    <label for="saldoPoupanca">Saldo:</label>
+    <input type="number" id="saldoPoupanca"><br><br>
+
+    <button onclick="mostrarDados()">Mostrar Dados</button>
+
+    <h3>Resultado Conta Corrente:</h3>
+    <p id="resultadoCorrente"></p>
+
+    <h3>Resultado Conta Poupança:</h3>
+    <p id="resultadoPoupanca"></p>
+
+    <script src="conta.js"></script>
+</body>
+</html>
