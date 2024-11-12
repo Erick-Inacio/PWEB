@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanban - Projeto de Software</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Firebase SDK compatível -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+
+    <!-- Configuração do Firebase -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCjKetSd_2qPx1gf3pwoBEUF568paOOyNs",
+            authDomain: "projeto-final-pweb-601c7.firebaseapp.com",
+            projectId: "projeto-final-pweb-601c7",
+            storageBucket: "projeto-final-pweb-601c7.firebasestorage.app",  // Mantido como fornecido pelo Firebase
+            messagingSenderId: "224026467499",
+            appId: "1:224026467499:web:c867274db8165289c76bee",
+            measurementId: "G-NTWWWT2PZC"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
 </head>
 <body>
     <h1>Kanban - Projeto de Software</h1>
-    <input type="text" id="search" placeholder="Buscar por título, prioridade, responsável ou data" oninput="searchTasks()">
-
+    <input type="text" id="search" placeholder="Buscar por título, prioridade, responsável ou data"
+        oninput="searchTasks()">
 
     <div class="kanban-board">
         <div class="kanban-column" id="backlog">
@@ -53,6 +72,7 @@
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/auth.js"></script>
 </body>
 </html>
