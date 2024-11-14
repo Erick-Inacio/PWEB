@@ -8,35 +8,39 @@
     <!-- Firebase SDK compatível -->
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
-    
-    <!-- Configuração do Firebase -->
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyCjKetSd_2qPx1gf3pwoBEUF568paOOyNs",
-            authDomain: "projeto-final-pweb-601c7.firebaseapp.com",
-            projectId: "projeto-final-pweb-601c7",
-            storageBucket: "projeto-final-pweb-601c7.firebasestorage.app",  // Mantido como fornecido pelo Firebase
-            messagingSenderId: "224026467499",
-            appId: "1:224026467499:web:c867274db8165289c76bee",
-            measurementId: "G-NTWWWT2PZC"
-        };
-        firebase.initializeApp(firebaseConfig);
-    </script>
+
+    <!-- Seu arquivo de configuração do Firebase -->
+    <script src="../js/firebaseConfig.js"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div id="login-container">
-        <h2>Login</h2>
+        <h2 id="form-title">Login</h2>
         <form id="login-form">
             <label for="email">Email:</label>
             <input type="email" id="email" required>
+            
             <label for="password">Senha:</label>
             <input type="password" id="password" required>
-            <button type="submit">Entrar</button>
+            
+            <!-- Campo de confirmação de senha (somente para registro) -->
+            <div id="confirm-password-container" style="display: none;">
+                <label for="confirm-password">Confirme a Senha:</label>
+                <input type="password" id="confirm-password">
+            </div>
+            
+            <button type="submit" id="submit-button">Entrar</button>
         </form>
         <p id="login-status"></p>
+        <div id="login-options">
+            <p id="toggle-form">Não tem uma conta? <a href="#" onclick="toggleForm()">Crie uma</a></p>
+            <p><a href="#" onclick="resetPassword()">Esqueceu a senha?</a></p>
+        </div>
     </div>
     
-    <!-- auth.js deve ser adicionado após o Firebase SDK -->
+    <!-- Scripts -->
     <script src="../js/auth.js"></script>
 </body>
 </html>

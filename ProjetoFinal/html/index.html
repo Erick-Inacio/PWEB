@@ -11,68 +11,76 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
 
-    <!-- Configuração do Firebase -->
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyCjKetSd_2qPx1gf3pwoBEUF568paOOyNs",
-            authDomain: "projeto-final-pweb-601c7.firebaseapp.com",
-            projectId: "projeto-final-pweb-601c7",
-            storageBucket: "projeto-final-pweb-601c7.firebasestorage.app",  // Mantido como fornecido pelo Firebase
-            messagingSenderId: "224026467499",
-            appId: "1:224026467499:web:c867274db8165289c76bee",
-            measurementId: "G-NTWWWT2PZC"
-        };
-        firebase.initializeApp(firebaseConfig);
-    </script>
+    <!-- Seu arquivo de configuração do Firebase -->
+    <script src="../js/firebaseConfig.js"></script>
 </head>
 <body>
-    <h1>Kanban - Projeto de Software</h1>
-    <input type="text" id="search" placeholder="Buscar por título, prioridade, responsável ou data"
-        oninput="searchTasks()">
+    <header>
+        <h1>Kanban - Projeto de Software</h1>
+        <button onclick="logout()">Sair</button>
+    </header>
+    
+    <main>
+        <input type="text" id="search" placeholder="Buscar por título, prioridade, responsável ou data" oninput="searchTasks()">
 
-    <div class="kanban-board">
-        <div class="kanban-column" id="backlog">
-            <h2>Backlog</h2>
-            <div class="task-list" id="backlog-list"></div>
-            <button onclick="openTaskModal()">Adicionar Tarefa</button>
+        <div class="kanban-board">
+            <div class="kanban-column" id="backlog">
+                <h2>Backlog</h2>
+                <div class="task-list" id="backlog-list"></div>
+                <button onclick="openTaskModal()">Adicionar Tarefa</button>
+            </div>
+            <div class="kanban-column" id="desenvolvimento">
+                <h2>Desenvolvimento</h2>
+                <div class="task-list" id="desenvolvimento-list"></div>
+            </div>
+            <div class="kanban-column" id="concluido">
+                <h2>Concluído</h2>
+                <div class="task-list" id="concluido-list"></div>
+            </div>
         </div>
-        <div class="kanban-column" id="desenvolvimento">
-            <h2>Desenvolvimento</h2>
-            <div class="task-list" id="desenvolvimento-list"></div>
-        </div>
-        <div class="kanban-column" id="concluido">
-            <h2>Concluído</h2>
-            <div class="task-list" id="concluido-list"></div>
-        </div>
-    </div>
 
-    <!-- Modal de Criação/Alteração de Tarefa -->
-    <div id="task-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeTaskModal()">&times;</span>
-            <h3 id="modal-title">Adicionar Tarefa</h3>
-            <form id="task-form">
-                <input type="hidden" id="task-id">
-                <label>Título:</label>
-                <input type="text" id="task-title" required>
-                <label>Descrição:</label>
-                <textarea id="task-desc" required></textarea>
-                <label>Prioridade:</label>
-                <select id="task-priority">
-                    <option value="Alta">Alta</option>
-                    <option value="Média">Média</option>
-                    <option value="Baixa">Baixa</option>
-                </select>
-                <label>Data de Vencimento:</label>
-                <input type="date" id="task-deadline" required>
-                <label>Responsáveis:</label>
-                <input type="text" id="task-responsible" required>
-                <button type="submit">Salvar</button>
-            </form>
-        </div>
-    </div>
+        <!-- Elemento de carregamento -->
+        <div id="loading" style="display: none;">Carregando...</div>
 
-    <script src="../js/script.js"></script>
+        <!-- Botão para carregar mais tarefas (se implementar paginação) -->
+        <!-- <button id="load-more" onclick="fetchTasksFromFirestore()">Carregar Mais</button> -->
+
+        <!-- Modal de Criação/Alteração de Tarefa -->
+        <div id="task-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeTaskModal()" tabindex="0">&times;</span>
+                <h3 id="modal-title">Adicionar Tarefa</h3>
+                <form id="task-form">
+                    <input type="hidden" id="task-id">
+                    
+                    <label for="task-title">Título:</label>
+                    <input type="text" id="task-title" required>
+                    
+                    <label for="task-desc">Descrição:</label>
+                    <textarea id="task-desc" required></textarea>
+                    
+                    <label for="task-priority">Prioridade:</label>
+                    <select id="task-priority">
+                        <option value="Alta">Alta</option>
+                        <option value="Média">Média</option>
+                        <option value="Baixa">Baixa</option>
+                    </select>
+                    
+                    <label for="task-deadline">Data de Vencimento:</label>
+                    <input type="date" id="task-deadline" required>
+                    
+                    <label for="task-responsible">Responsáveis:</label>
+                    <input type="text" id="task-responsible" required>
+                    
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
     <script src="../js/auth.js"></script>
+    <script src="../js/tasks.js"></script>
+    <script src="../js/ui.js"></script>
 </body>
 </html>
