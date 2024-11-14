@@ -22,7 +22,7 @@ if (loginForm) {
         if (isLogin) {
             firebase.auth().signInWithEmailAndPassword(email, password)
                 .then(() => {
-                    window.location.href = "index.html";
+                    window.location.href = "../html/home.html";
                 })
                 .catch((error) => {
                     loginStatus.textContent = `Erro: ${error.message}`;
@@ -35,7 +35,7 @@ if (loginForm) {
             }
             firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then(() => {
-                    window.location.href = "index.html";
+                    window.location.href = "../html/home.html";
                 })
                 .catch((error) => {
                     loginStatus.textContent = `Erro: ${error.message}`;
@@ -79,10 +79,10 @@ function resetPassword() {
     });
 }
 
-if (window.location.pathname.endsWith("index.html")) {
+if (window.location.pathname.endsWith("../html/home.html")) {
     firebase.auth().onAuthStateChanged((user) => {
         if (!user) {
-            window.location.href = "login.html";
+            window.location.href = "../html/index.html";
         }
     });
 }
@@ -90,7 +90,7 @@ if (window.location.pathname.endsWith("index.html")) {
 function logout() {
     firebase.auth().signOut()
         .then(() => {
-            window.location.href = "login.html";
+            window.location.href = "../html/index.html";
         })
         .catch((error) => {
             console.error("Erro ao fazer logout: ", error);
