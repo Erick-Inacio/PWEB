@@ -1,6 +1,4 @@
-// auth.js
 
-// Função de login e registro
 const loginForm = document.getElementById("login-form");
 const loginStatus = document.getElementById("login-status");
 const formTitle = document.getElementById("form-title");
@@ -8,7 +6,7 @@ const submitButton = document.getElementById("submit-button");
 const confirmPasswordContainer = document.getElementById("confirm-password-container");
 const toggleFormText = document.getElementById("toggle-form");
 
-let isLogin = true; // Indica se o formulário está em modo de login ou registro
+let isLogin = true;
 
 if (loginForm) {
     loginForm.addEventListener("submit", (e) => {
@@ -22,7 +20,6 @@ if (loginForm) {
         }
 
         if (isLogin) {
-            // Processo de Login
             firebase.auth().signInWithEmailAndPassword(email, password)
                 .then(() => {
                     window.location.href = "index.html";
@@ -31,7 +28,6 @@ if (loginForm) {
                     loginStatus.textContent = `Erro: ${error.message}`;
                 });
         } else {
-            // Processo de Registro
             const confirmPassword = document.getElementById("confirm-password").value;
             if (password !== confirmPassword) {
                 loginStatus.textContent = "As senhas não coincidem.";
@@ -48,7 +44,6 @@ if (loginForm) {
     });
 }
 
-// Função para alternar entre Login e Registro
 function toggleForm() {
     isLogin = !isLogin;
     if (isLogin) {
@@ -62,10 +57,9 @@ function toggleForm() {
         confirmPasswordContainer.style.display = "block";
         toggleFormText.innerHTML = 'Já tem uma conta? <a href="#" onclick="toggleForm()">Faça login</a>';
     }
-    loginStatus.textContent = ""; // Limpa mensagens de erro
+    loginStatus.textContent = ""; 
 }
 
-// Função para redefinir senha
 function resetPassword() {
     const email = document.getElementById("email").value.trim();
     if (!email) {
@@ -85,7 +79,6 @@ function resetPassword() {
     });
 }
 
-// Verificação de autenticação em index.html
 if (window.location.pathname.endsWith("index.html")) {
     firebase.auth().onAuthStateChanged((user) => {
         if (!user) {
@@ -94,7 +87,6 @@ if (window.location.pathname.endsWith("index.html")) {
     });
 }
 
-// Função de logout (permanece a mesma)
 function logout() {
     firebase.auth().signOut()
         .then(() => {

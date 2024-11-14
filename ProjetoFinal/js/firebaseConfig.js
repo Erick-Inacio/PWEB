@@ -1,4 +1,3 @@
-// Configuração do Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyCjKetSd_2qPx1gf3pwoBEUF568paOOyNs",
     authDomain: "projeto-final-pweb-601c7.firebaseapp.com",
@@ -9,5 +8,4 @@ const firebaseConfig = {
     measurementId: "G-NTWWWT2PZC"
 };
 
-// Inicializa o Firebase
 firebase.initializeApp(firebaseConfig);
