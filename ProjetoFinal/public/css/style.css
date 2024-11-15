@@ -1,0 +1,437 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #86878d;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+header {
+    background-color: #595a5e;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px 10px;
+    background-color: #f44336;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #d32f2f;
+}
+
+input#search {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.kanban-board {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.kanban-column {
+    width: 30%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.kanban-column h2 {
+    color: #fff;
+}
+
+#backlog {
+    background-color: #d3d3d3;
+}
+
+#desenvolvimento {
+    background-color: #b0c4de;
+}
+
+#concluido {
+    background-color: #98fb98;
+}
+
+.task-list {
+    min-height: 200px;
+    background-color: white;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.task {
+    position: relative;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: move;
+    color: #fff !important;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.high-priority {
+    background-color: #b95959 !important;
+    border: 1px solid #b22222;
+}
+
+.medium-priority {
+    background-color: #ca9c46 !important;
+    border: 1px solid #ff8c00;
+}
+
+.low-priority {
+    background-color: #3a7e57 !important;
+    border: 1px solid #006400;
+}
+
+.task-content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.task-details {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.task-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.task-description {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+
+.task-responsible,
+.task-deadline {
+    font-size: 12px;
+    margin: 0 0 3px 0;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.button-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+}
+
+.button-container button:hover {
+    color: #ddd;
+}
+
+.edit-btn:hover {
+    color: #ffeb3b;
+}
+
+.delete-btn:hover {
+    color: #ff5722;
+}
+
+.task-overdue::before,
+.task-due-soon::before {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 18px;
+}
+
+.task-overdue {
+    padding-left: 35px;
+    border-left: 5px solid #ff0000;
+}
+
+.task-due-soon {
+    padding-left: 35px;
+    border-left: 5px solid #ffa500;
+}
+
+.task-overdue::before {
+    content: "⚠️";
+}
+
+.task-due-soon::before {
+    content: "⏰";
+}
+
+.task-completed {
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: left;
+    position: relative;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="date"],
+.modal-content textarea,
+.modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.modal-content textarea {
+    resize: vertical;
+}
+
+.modal-content button[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+@-webkit-keyframes animateModal {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes animateModal {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    outline: none;
+}
+
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+    }
+}
+
+#login-container {
+    background-color: #fff;
+    width: 400px;
+    max-width: 90%;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#login-container h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+#login-container form {
+    text-align: left;
+}
+
+#login-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#login-container input[type="email"],
+#login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#login-container button[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#login-container button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#login-status {
+    margin-top: 15px;
+    color: red;
+}
+
+#login-options {
+    margin-top: 20px;
+}
+
+#login-options p {
+    margin: 5px 0;
+}
+
+#login-options a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+#login-options a:hover {
+    text-decoration: underline;
+}
+
+#login-status.success {
+    color: green;
+}
+
+#login-status.error {
+    color: red;
+}
+
+@media screen and (max-width: 600px) {
+    #login-container {
+        margin: 50px auto;
+        padding: 20px;
+    }
+}
+
+#loading {
+    font-size: 18px;
+    color: #333;
+    margin: 20px 0;
+}
+
+.undo-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #323232;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.undo-notification button {
+    margin-left: 15px;
+    padding: 8px 12px;
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.undo-notification button:hover {
+    background-color: #e68900;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

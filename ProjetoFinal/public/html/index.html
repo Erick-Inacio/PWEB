@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Kanban Project</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+
+    <script src="../js/firebaseConfig.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="login-container">
+        <h2 id="form-title">Login</h2>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required>
+            
+            <div id="confirm-password-container" style="display: none;">
+                <label for="confirm-password">Confirme a Senha:</label>
+                <input type="password" id="confirm-password">
+            </div>
+            
+            <button type="submit" id="submit-button">Entrar</button>
+        </form>
+        <p id="login-status"></p>
+        <div id="login-options">
+            <p id="toggle-form">Não tem uma conta? <a href="#" onclick="toggleForm()">Crie uma</a></p>
+            <p><a href="#" onclick="resetPassword()">Esqueceu a senha?</a></p>
+        </div>
+    </div>
+    
+    <script src="../js/auth.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/tasks.js"></script>
+</body>
+</html>
